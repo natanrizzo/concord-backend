@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/concord-backend/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/concord-backend/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/concord-backend",
+  "projects": {
+    "concord-backend": {
+      "type": "application",
+      "root": "apps/concord-backend",
+      "entryFile": "main",
+      "sourceRoot": "apps/concord-backend/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/concord-backend/tsconfig.app.json"
+      }
+    },
+    "user": {
+      "type": "application",
+      "root": "apps/user",
+      "entryFile": "main",
+      "sourceRoot": "apps/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user/tsconfig.app.json"
+      }
+    }
+  }
+}
